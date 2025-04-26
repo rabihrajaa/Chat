@@ -13,8 +13,8 @@ import { ChatRoomPage } from './chat-room.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ChatRoomPageRoutingModule
-  ],
-  declarations: [ChatRoomPage]
+    ChatRoomPageRoutingModule,
+    ChatRoomPage
+  ]
 })
 export class ChatRoomPageModule {}

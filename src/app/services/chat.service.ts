@@ -37,7 +37,7 @@ export class ChatService {
 
   getMessages(userId: number): Message[] {
     if (!this.messages[userId]) {
-      this.messages[userId] = []; // Initialise si vide
+      this.messages[userId] = [];
     }
     return this.messages[userId];
   }
