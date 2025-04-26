@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 
-
-export const tabsRoutess: Routes = [
+export const tabsRoutes: Routes = [
   {
     path: '',
     component: TabsPage,
@@ -23,10 +21,8 @@ export const tabsRoutess: Routes = [
       {
         path: '',
         redirectTo: 'tab1',
-        pathMatch: 'full'
+        pathMatch: 'full',
       }
     ]
   }
 ];
-
-export class TabsPageRoutingModule {}

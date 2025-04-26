@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService, User } from '../../services/chat.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.page.html',
   styleUrls: ['./user-list.page.scss'],
-  imports:[IonicModule]
+  imports:[IonicModule,CommonModule,RouterModule]
 })
 export class UserListPage implements OnInit {
 

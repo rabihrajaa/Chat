@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>chat-room</ion-title>
+    <ion-title>Chat avec {{ user?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">chat-room</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div *ngFor="let msg of messages">
+    <div [class]="msg.senderId === currentUserId ? 'sent' : 'received'">
+      <p>{{ msg.content }}</p>
+      <small>{{ msg.timestamp | date:'shortTime' }}</small>
+    </div>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-input [(ngModel)]="newMessage" placeholder="Ecrire un message"></ion-input>
+      <ion-button (click)="sendMessage()">Envoyer</ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

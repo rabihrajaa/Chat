@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
@@ -5,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
   selector: 'app-user-profile',
   templateUrl: './user-profile.page.html',
   styleUrls: ['./user-profile.page.scss'],
-    imports:[IonicModule]
+    imports:[IonicModule,CommonModule]
 })
 export class UserProfilePage implements OnInit {
 
