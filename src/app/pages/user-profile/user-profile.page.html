@@ -3,19 +3,19 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
     </ion-buttons>
-    <ion-title>Profil de {{ user?.name }}</ion-title>
+    <ion-title>Profil de {{ user.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <ion-card class="user-card">
     <div style="display: flex; justify-content: center; margin-top: 16px;">
-      <img [src]="user?.avatar" alt="Avatar"
+      <img [src]="user.avatar" alt="Avatar"
         style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;">
     </div>
 
     <ion-card-header>
-      <ion-card-title class="ion-text-center">{{ user?.name }}</ion-card-title>
+      <ion-card-title class="ion-text-center">{{ user.name }}</ion-card-title>
     </ion-card-header>
     
     <ion-card-content class="ion-text-center">
