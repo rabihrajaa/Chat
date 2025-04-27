@@ -136,7 +136,7 @@ const config: CapacitorConfig = {
 ---
 
 ## 🔥 Captures d'écran
-![user_list](user_list.png)
+![user_list](user_list.PNG)
 
 ---
 
