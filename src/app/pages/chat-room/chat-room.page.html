@@ -12,17 +12,25 @@
         <span style="font-size: 18px;">{{ user?.name }}</span>
       </div>
     </ion-title>
-    
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="call" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="videocam" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-
-
 <ion-content class="ion-padding">
-  <div *ngFor="let msg of messages">
-    <div [class]="msg.senderId === currentUserId ? 'sent' : 'received'">
-      <p>{{ msg.content }}</p>
-      <small>{{ msg.timestamp | date:'shortTime' }}</small>
+  <div *ngFor="let msg of messages" [ngClass]="{'d-flex justify-content-end': msg.senderId === currentUserId, 'd-flex justify-content-start': msg.senderId !== currentUserId}">
+    <div [class]="msg.senderId === currentUserId ? 'sent-message' : 'received-message'">
+      <div [ngClass]="{'bg-primary text-white': msg.senderId === currentUserId, 'bg-light': msg.senderId !== currentUserId}" class="p-3 rounded-3 my-2 max-width-70">
+        <p class="m-0">{{ msg.content }}</p>
+        <small class="d-block text-muted">{{ msg.timestamp | date:'shortTime' }}</small>
+      </div>
     </div>
   </div>
 </ion-content>
@@ -30,8 +38,10 @@
 <ion-footer>
   <ion-toolbar>
     <ion-item>
-      <ion-input [(ngModel)]="newMessage" placeholder="Ecrire un message"></ion-input>
-      <ion-button (click)="sendMessage()">Envoyer</ion-button>
+      <ion-input [(ngModel)]="newMessage" placeholder="Écrire un message"></ion-input>
+      <ion-button (click)="sendMessage()">
+        <ion-icon slot="start" name="send"></ion-icon> Envoyer
+      </ion-button>
     </ion-item>
   </ion-toolbar>
 </ion-footer>

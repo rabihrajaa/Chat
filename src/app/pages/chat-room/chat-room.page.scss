@@ -1,0 +1,31 @@
+.sent-message {
+    background-color: #007bff; 
+    color: white;
+    text-align: right;
+    border-radius: 20px 20px 0 20px; /* Arrondi seulement sur le côté droit */
+    padding: 10px 15px;
+    max-width: 50%; 
+    margin-left: auto; /* Pousse le message à droite */
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+  
+.received-message {
+    background-color: #f1f1f1; 
+    color: black;
+    text-align: left;
+    border-radius: 20px 20px 20px 0; /* Arrondi seulement sur le côté gauche */
+    padding: 10px 15px;
+    max-width: 50%; 
+    margin-right: auto; /* Pousse le message à gauche */
+    margin-left: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+  
+.sent-message p, .received-message p {
+    margin: 0;
+}

@@ -47,4 +47,5 @@ export class ChatRoomPage implements OnInit {
   goToUserProfile() {
     this.router.navigate(['/tabs/tab3', this.user.id]);
   }
+  
 }

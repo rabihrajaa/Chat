@@ -22,7 +22,10 @@ export class ChatService {
     { id: 1, name: 'Alice', avatar: 'https://i.pravatar.cc/150?img=1' },
     { id: 2, name: 'Bob', avatar: 'https://i.pravatar.cc/150?img=2' },
     { id: 3, name: 'Charlie', avatar: 'https://i.pravatar.cc/150?img=3' },
-    { id: 99, name: 'Moi', avatar: 'https://i.pravatar.cc/150?img=4' } // toi-même
+    { id: 4, name: 'Alice', avatar: 'https://i.pravatar.cc/150?img=4' },
+    { id: 5, name: 'Bob', avatar: 'https://i.pravatar.cc/150?img=5' },
+    { id: 6, name: 'Charlie', avatar: 'https://i.pravatar.cc/150?img=6' },
+    { id: 7, name: 'Moi', avatar: 'https://i.pravatar.cc/150?img=7' }
   ];
 
   // Messages statiques existants
@@ -67,11 +70,14 @@ export class ChatService {
 
   // Récupère tous les messages échangés entre l'utilisateur connecté (99) et un autre utilisateur
   getMessages(userId: number): Message[] {
-    return this.messages.filter(
-      m => (m.senderId === userId && m.receiverId === 99) ||
-           (m.senderId === 99 && m.receiverId === userId)
-    );
+    return this.messages
+      .filter(
+        m => (m.senderId === userId && m.receiverId === 99) ||
+             (m.senderId === 99 && m.receiverId === userId)
+      )
+      .sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime()); // Tri par date
   }
+  
 
   // Envoie un message
   sendMessage(receiverId: number, content: string, senderId: number) {
