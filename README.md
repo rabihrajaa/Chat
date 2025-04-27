@@ -136,7 +136,23 @@ const config: CapacitorConfig = {
 ---
 
 ## 🔥 Captures d'écran
-<img src="user_list.PNG" alt="Liste des utilisateurs" width="300">
+### liste des utilisateurs: 
+
+<p align="center">
+  <img src="user_list.PNG" alt="Liste des utilisateurs" width="300">
+</p>
+
+### Room: 
+
+<p align="center">
+  <img src="chat_room.PNG" alt="Liste des utilisateurs" width="300">
+</p
+
+### Profile de l'utilisateur: 
+
+<p align="center">
+  <img src="profile.PNG" alt="Liste des utilisateurs" width="300">
+</p
 
 ---
 
