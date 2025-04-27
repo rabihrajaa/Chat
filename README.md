@@ -135,7 +135,7 @@ const config: CapacitorConfig = {
 
 ---
 
-## 🔥 Captures d'écran
+## 🔥 Captures d'écran (WEB)
 ### liste des utilisateurs: 
 
 <p align="center">
@@ -153,6 +153,26 @@ const config: CapacitorConfig = {
 <p align="center">
   <img src="profile.PNG" alt="Profile" width="400">
 </p
+
+## 🔥 Captures d'écran (Mobile)
+### liste des utilisateurs: 
+
+<p align="center">
+  <img src="m1.PNG" alt="Liste des utilisateurs" width="400">
+</p>
+
+### Room: 
+
+<p align="center">
+  <img src="m2.PNG" alt="Room" width="400">
+</p
+
+### Profile de l'utilisateur: 
+
+<p align="center">
+  <img src="m3.PNG" alt="Profile" width="400">
+</p
+
 
 ---
 
