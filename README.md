@@ -139,19 +139,19 @@ const config: CapacitorConfig = {
 ### liste des utilisateurs: 
 
 <p align="center">
-  <img src="user_list.PNG" alt="Liste des utilisateurs" width="300">
+  <img src="user_list.PNG" alt="Liste des utilisateurs" width="400">
 </p>
 
 ### Room: 
 
 <p align="center">
-  <img src="chat_room.PNG" alt="Liste des utilisateurs" width="300">
+  <img src="chat_room.PNG" alt="Room" width="400">
 </p
 
 ### Profile de l'utilisateur: 
 
 <p align="center">
-  <img src="profile.PNG" alt="Liste des utilisateurs" width="300">
+  <img src="profile.PNG" alt="Profile" width="400">
 </p
 
 ---
