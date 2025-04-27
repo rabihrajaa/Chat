@@ -21,10 +21,10 @@ export class UserListPage implements OnInit {
   }
 
   openChat(user: User) {
-    this.router.navigate(['/chat-room', user.id]);
+    this.router.navigate(['/tabs/tab2', user.id]);
   }
 
   viewProfile(user: User) {
-    this.router.navigate(['/user-profile', user.id]);
+    this.router.navigate(['/tabs/tab3', user.id]);
   }
 }

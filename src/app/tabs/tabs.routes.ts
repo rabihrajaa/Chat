@@ -11,11 +11,11 @@ export const tabsRoutes: Routes = [
         loadComponent: () => import('../pages/user-list/user-list.page').then(m => m.UserListPage),
       },
       {
-        path: 'tab2',
+        path: 'tab2/:id',
         loadComponent: () => import('../pages/chat-room/chat-room.page').then(m => m.ChatRoomPage),
       },
       {
-        path: 'tab3',
+        path: 'tab3/:id',
         loadComponent: () => import('../pages/user-profile/user-profile.page').then(m => m.UserProfilePage),
       },
       {

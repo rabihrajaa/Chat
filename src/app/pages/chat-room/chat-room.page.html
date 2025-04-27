@@ -1,8 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Chat avec {{ user?.name }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      <div (click)="goToUserProfile()" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+        <ion-avatar style="width: 40px; height: 40px;">
+          <img [src]="user?.avatar" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+        </ion-avatar>
+        <span style="font-size: 18px;">{{ user?.name }}</span>
+      </div>
+    </ion-title>
+    
   </ion-toolbar>
 </ion-header>
+
+
 
 <ion-content class="ion-padding">
   <div *ngFor="let msg of messages">
